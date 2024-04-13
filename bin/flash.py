@@ -47,3 +47,5 @@ print('\n\nPlease reset the device with the boot button pressed.')
 input('When reset: press Enter to flash the firmware...')
 
 os.system(f'esptool.py --port {port} write_flash -z 0x0 {firmware_file_path}')
+
+print('\033[92m' + 'Firmware flashed successfully.' + '\033[0m')

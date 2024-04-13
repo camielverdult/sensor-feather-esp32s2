@@ -18,4 +18,4 @@ if not os.path.exists('/Volumes/CIRCUITPY'):
     sys.exit(1)
     
 # Sync only the code directory without removing other files on the CIRCUITPY volume
-os.system('rsync -av --exclude=".*" code/ /Volumes/CIRCUITPY/code/')
+os.system('rsync -auv --exclude="code/.*" code/ /Volumes/CIRCUITPY/')
